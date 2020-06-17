@@ -9,7 +9,7 @@ import entite.Produit;
 import service.ConnexionBd;
 public class ProduitManager {
     private static String queryGetAll = "SELECT * from produit where idCategorie=?";
-    // private static String queryGetByIdCat = "select * from recette where idCategorie =?";
+
     //private static String queryGetById = "select * from recette where id =?";
     public static ArrayList<Produit> getAll(Context context, int idCat) {
         ArrayList<Produit> retour = new ArrayList<>();
@@ -26,5 +26,22 @@ public class ProduitManager {
         }
         return retour;
     }
+    private static String queryGetById = "select * from produit where idProduit =?";
+    public static Produit getById(Context context, int idProduit) {
+        Produit retour = new Produit();
 
+        Cursor cursor = ConnexionBd.getBd(context).rawQuery(queryGetById, new String[] { idProduit + "" });
+        if( cursor != null && cursor.moveToFirst() ){
+            retour.setIdProduit(cursor.getInt(cursor.getColumnIndex("idProduit"))); ;
+            retour.setNomProduit(cursor.getString(cursor.getColumnIndex("nomProduit")));
+            retour.setImageProduit(cursor.getString(cursor.getColumnIndex("imageProduit")));
+            retour.setPrixProduit(cursor.getDouble(cursor.getColumnIndex("prix")));
+            cursor.close();
+        }
+        //  while (cursor.moveToNext()) {
+        // if(cursor.getInt(cursor.getColumnIndex("id"))==idD){
+
+
+        return retour;
+    }
 }
