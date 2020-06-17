@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--    <item-->
+    <!--        android:id="@+id/menu_accueil"-->
+    <!--        android:title="@string/menu_accueil" />-->
+    <!--    <item-->
+    <!--        android:id="@+id/menu_copyLien"-->
+    <!--        android:title="@string/menu_copyLien" />-->
+    <item
+        android:id="@+id/menu_menu"
+        android:title="@string/menu_menu" />
+    <item
+        android:id="@+id/menu_panier"
+        android:title="@string/menu_panier" />
+    <item
+        android:id="@+id/menu_planCommande"
+        android:title="@string/menu_planCommande" />
+    <item
+        android:id="@+id/menu_livraison"
+        android:title="@string/menu_livraison" />
+    <item
+        android:id="@+id/menu_nousContacter"
+        android:title="@string/menu_nousContacter" />
+    <item
+        android:id="@+id/menu_horaire"
+        android:title="@string/menu_horaire" />
+    <item
+        android:id="@+id/menu_seRegistrer"
+        android:title="@string/menu_seRegistrer" />
+    <item
+        android:id="@+id/action_fermer"
+        android:title="@string/action_fermer" />
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/loupe"
+        android:title="search"
+        app:showAsAction="ifRoom" />
+</menu>
