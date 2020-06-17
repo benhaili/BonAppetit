@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
@@ -13,12 +15,15 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.IOException;
 
+import entite.Panier;
 import entite.Produit;
+import manager.PanierManager;
 import manager.ProduitManager;
 public class FoodDetail extends AppCompatActivity {
     TextView foodName,foodPrice,foodDesc;
     ImageView foodImage;
     Produit p;
+
     CollapsingToolbarLayout collapsingToolbarLayout;
     FloatingActionButton btnCar;
     ElegantNumberButton numberButton;
@@ -48,7 +53,21 @@ public class FoodDetail extends AppCompatActivity {
             e.printStackTrace();
         }
 
+btnCar.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        int qte= Integer.parseInt(numberButton.getNumber());
+        Panier panier =new Panier(p.getIdProduit(),qte);
 
+
+        //Toast.makeText(ctx, "Qte"+qte, Toast.LENGTH_SHORT).show();
+        if(PanierManager.add(ctx,panier)){
+            Toast.makeText(ctx, "Produit Bien Ajouter au panier", Toast.LENGTH_SHORT).show();
+        }
 
     }
+});
 }
+
+    }
+
