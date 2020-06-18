@@ -11,23 +11,40 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import manager.UtilisateurManager;
 public class MainActivity extends AppCompatActivity {
     Button btnCon;
+    EditText nom,pass;
     Context ctx;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnCon = findViewById(R.id.button_login);
+        nom=findViewById(R.id.edittext_username);
+        pass=findViewById(R.id.edittext_password);
         ctx = this;
         btnCon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(UtilisateurManager.seConnecter(ctx,nom.getText().toString(),pass.getText().toString())){
+                    Intent intent = new Intent(ctx, MenuCategories.class);
+                    startActivity(intent);
+                }
+                else {
+                    Toast.makeText(ctx, "Informations Incorrectes Reessaye!!", Toast.LENGTH_SHORT).show();
+                    nom.setText("");
+                    pass.setText("");
 
-                Intent intent = new Intent(ctx, MenuCategories.class);
-                startActivity(intent);
+                }
+
+
+
             }
         });
     }

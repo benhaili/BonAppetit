@@ -8,19 +8,26 @@
     android:orientation="vertical"
    >
 
-    <ImageView
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        app:srcCompat="@drawable/logo" />
-
     <EditText
         android:id="@+id/edittext_username"
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_marginTop="10dp"
         android:hint="@string/username" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/prompt_email" />
+
+    <EditText
+        android:id="@+id/tel"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:hint="telephone" />
 
     <EditText
         android:id="@+id/edittext_password"
@@ -30,19 +37,19 @@
         android:hint="@string/password" />
 
     <EditText
-        android:id="@+id/edittext_cnf_password"
+        android:id="@+id/pass1"
         android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:hint="@string/repeter_password"
-        android:textColor="#fff" />
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="retype psw"
+        android:inputType="textPersonName" />
 
     <Button
-        android:id="@+id/button_register"
+        android:id="@+id/btnR"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
-        android:text="@string/connexion" />
+        android:text="Creer Le compte" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -68,4 +75,5 @@
             android:textStyle="bold" />
 
     </LinearLayout>
+
 </LinearLayout>

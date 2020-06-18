@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
@@ -50,5 +52,8 @@ public class FoodDetail extends AppCompatActivity {
 
 
 
+
+
     }
+
 }
