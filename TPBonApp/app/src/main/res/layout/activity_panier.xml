@@ -32,7 +32,7 @@
         <ListView
             android:id="@+id/listeProduit"
             android:layout_width="440dp"
-            android:layout_height="408dp" />
+            android:layout_height="316dp" />
 
     </LinearLayout>
 
@@ -42,17 +42,28 @@
         android:orientation="vertical">
 
 
-        <TextView
-            android:id="@+id/prixtotale"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="112dp"
-            android:text="TextView" />
+            android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/valider"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="valider" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/retour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="magasiner" />
+
+                <Button
+                    android:id="@+id/valider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="valider" />
+            </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
 
