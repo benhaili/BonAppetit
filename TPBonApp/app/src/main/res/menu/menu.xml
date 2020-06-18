@@ -2,12 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!--    <item-->
-    <!--        android:id="@+id/menu_accueil"-->
-    <!--        android:title="@string/menu_accueil" />-->
-    <!--    <item-->
-    <!--        android:id="@+id/menu_copyLien"-->
-    <!--        android:title="@string/menu_copyLien" />-->
     <item
         android:id="@+id/menu_menu"
         android:title="@string/menu_menu" />

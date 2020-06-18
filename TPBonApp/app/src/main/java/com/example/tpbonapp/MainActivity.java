@@ -16,17 +16,16 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     Button btnCon;
     Context ctx;
-    Button btnCart ;
+    Button btnCart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         btnCon = findViewById(R.id.button_login);
         ctx = this;
         btnCon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(ctx, MenuCategories.class);
                 startActivity(intent);
             }
@@ -63,9 +62,15 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.menu_panier:
                 Toast.makeText(MainActivity.this, getString(R.string.menu_panier), Toast.LENGTH_LONG).show();
+<<<<<<< HEAD
 
                Intent panier = new Intent(MainActivity.this, PanierActivity.class); // Changer pour PANIER
                startActivity(panier);
+=======
+                // YAHYA ATTENTION!!!! Changer pour PANIER.class
+                Intent panier = new Intent(MainActivity.this, PanierActivity.class); // Changer pour PANIER
+                startActivity(panier);
+>>>>>>> 1b19fcbf0923cd73f15c3ea33bd065083edc6b43
                 Toast.makeText(MainActivity.this, getString(R.string.menu_panier), Toast.LENGTH_LONG).show();
                 break;
             case R.id.menu_planCommande:
@@ -104,21 +109,25 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, getString(R.string.menu_seRegistrer), Toast.LENGTH_LONG).show();
                 break;
             case R.id.action_fermer:
-                Toast.makeText(MainActivity.this, getString(R.string.action_fermer), Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Restez avec nous SVP", Toast.LENGTH_SHORT).show();
+                final androidx.appcompat.app.AlertDialog dialog = new androidx.appcompat.app.AlertDialog.Builder(this)
+                        .setTitle("Fermeture de 'Bon Appétit'")
+                        .setMessage("Etês-vous sûr?")
+                        .setPositiveButton("Oui", null)
+                        .setNegativeButton("Cancel", null)
+                        .show();
+                Button positiveButton = dialog.getButton(androidx.appcompat.app.AlertDialog.BUTTON_POSITIVE);
+                positiveButton.setOnClickListener((new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                        android.os.Process.killProcess(android.os.Process.myPid());
+                        System.exit(1);
+                    }
+                }));
                 break;
         }
         Toast.makeText(ctx, msg, Toast.LENGTH_SHORT).show();
         return true;
-    }
-    public void process(View view) {
-        Intent intent = null, chooser = null;
-        if (view.getId() == R.id.btn_google_maps) {
-            intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData((Uri.parse(("geo: 45.533908,-73.549617"))));
-            chooser = Intent.createChooser(intent, "Nos coordonee");
-            startActivity(chooser);
-        }
-        if (view.getId() == R.id.btn_email) {
-        }
     }
 }

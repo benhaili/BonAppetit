@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".RegisterActivity">
+    tools:context=".LoginActivity">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
         android:layout_marginTop="80dp"
         app:srcCompat="@drawable/logo" />
 
@@ -28,25 +28,38 @@
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
-
         android:background="#dcdcdc"
         android:hint="@string/password" />
 
-    <EditText
-        android:id="@+id/edittext_cnf_password"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:background="#dcdcdc"
-        android:hint="@string/repeter_password"
-        android:textColor="#fff" />
-
     <Button
-        android:id="@+id/button_register"
+        android:id="@+id/button_login"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:background="#a0a0a0"
-        android:text="@string/connexion" />
+        android:text="Login" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:fontFamily="@font/sofia_regular"
+            android:text="@string/not_registered" />
+
+        <TextView
+            android:id="@+id/editview_register"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:padding="10dp"
+            android:text="@string/creer_un_compte"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
 </LinearLayout>
