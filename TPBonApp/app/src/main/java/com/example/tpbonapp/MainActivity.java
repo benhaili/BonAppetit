@@ -62,15 +62,15 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.menu_panier:
                 Toast.makeText(MainActivity.this, getString(R.string.menu_panier), Toast.LENGTH_LONG).show();
-<<<<<<< HEAD
 
-               Intent panier = new Intent(MainActivity.this, PanierActivity.class); // Changer pour PANIER
-               startActivity(panier);
-=======
+
+//               Intent panier = new Intent(MainActivity.this, PanierActivity.class); // Changer pour PANIER
+//               startActivity(panier);
+
                 // YAHYA ATTENTION!!!! Changer pour PANIER.class
                 Intent panier = new Intent(MainActivity.this, PanierActivity.class); // Changer pour PANIER
                 startActivity(panier);
->>>>>>> 1b19fcbf0923cd73f15c3ea33bd065083edc6b43
+
                 Toast.makeText(MainActivity.this, getString(R.string.menu_panier), Toast.LENGTH_LONG).show();
                 break;
             case R.id.menu_planCommande:

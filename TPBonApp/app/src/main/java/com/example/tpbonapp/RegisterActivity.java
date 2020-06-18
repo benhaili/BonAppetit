@@ -21,7 +21,8 @@ public class RegisterActivity extends AppCompatActivity {
         mTextPassword = (EditText) findViewById(R.id.edittext_password);
         mTextCnfPassword = (EditText) findViewById(R.id.edittext_cnf_password);
         mButtonRegister = (Button) findViewById(R.id.button_register);
-        mTextViewLogin = (TextView) findViewById(R.id.editview_register);
+
+
         mButtonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

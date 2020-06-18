@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="600dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="4dp">
+
+<!--    <include android:id="@+id/menu_menu"/>-->
+<!--    <include android:id="@+id/menu_panier"/>-->
+<!--    <include android:id="@+id/menu_planCommande"/>-->
+<!--    <include android:id="@+id/menu_livraison"/>-->
+<!--    <include android:id="@+id/menu_nousContacter"/>-->
+<!--    <include android:id="@+id/menu_horaire"/>-->
+<!--    <include android:id="@+id/menu_seRegistrer"/>-->
+<!--    <include android:id="@+id/action_fermer"/>-->
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -12,8 +22,8 @@
             android:id="@+id/menu_image"
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:scaleType="centerCrop"
-            android:background="@drawable/ic_launcher_background"/>
+            android:background="@drawable/ic_launcher_background"
+            android:scaleType="centerCrop" />
 
         <TextView
             android:id="@+id/menu_name"
@@ -24,7 +34,7 @@
             android:gravity="center"
             android:text="Name of the menu"
             android:textColor="@android:color/white"
-            android:textSize="25dp"/>
+            android:textSize="25dp" />
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
