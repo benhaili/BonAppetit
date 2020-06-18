@@ -65,8 +65,13 @@ btnCar.setOnClickListener(new View.OnClickListener() {
             Toast.makeText(ctx, "Produit Bien Ajouter au panier", Toast.LENGTH_SHORT).show();
         }
 
+
+
     }
+
+
 });
+
 }
 
     }

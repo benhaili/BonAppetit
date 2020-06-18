@@ -44,4 +44,10 @@ public class Utilisateur {
     public void setPassword(String password) {
         this.password = password;
     }
+    public Utilisateur(String nom, String email, String tel, String password) {
+        this.nom = nom;
+        this.email = email;
+        this.tel = tel;
+        this.password = password;
+    }
 }
