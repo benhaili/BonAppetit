@@ -9,12 +9,13 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import sqliteHelper.CategorieHelper;
+import sqliteHelper.Helper;
 public class ConnexionBd {
     private static SQLiteDatabase bd;
-    public static String nomBd = "dbTp";
+    public static String nomBd = "tpApp";
     private static int version = 1;
     public static SQLiteDatabase getBd(Context ctx) {
-        CategorieHelper helper = new CategorieHelper(ctx, nomBd, null, version);
+        Helper helper = new Helper(ctx, nomBd, null, version);
         bd = helper.getWritableDatabase();
         return bd;
     }
@@ -29,7 +30,7 @@ public class ConnexionBd {
 
         AssetManager assetManager = context.getAssets();
         try {
-            InputStream in = assetManager.open("dbTp.db");
+            InputStream in = assetManager.open("database/tpApp.db");
             FileOutputStream out = new FileOutputStream(bdApp);
             byte[] buffer = new byte[256];
             while (in.read(buffer) != -1) {
