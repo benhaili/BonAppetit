@@ -6,18 +6,16 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-<<<<<<< HEAD
+
     tools:context=".RegisterActivity">
-<!--    <include layout="@layout/toolbar_layout"/>-->
+   <include layout="@layout/toolbar_layout"/>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         app:srcCompat="@drawable/logo" />
-=======
-   >
->>>>>>> 533738c70742c509708c873c173686c9a8fdb8af
+
 
     <EditText
         android:id="@+id/edittext_username"

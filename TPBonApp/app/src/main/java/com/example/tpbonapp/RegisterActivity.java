@@ -18,41 +18,43 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-<<<<<<< HEAD
-        mTextUsername = (EditText) findViewById(R.id.edittext_username);
-        mTextPassword = (EditText) findViewById(R.id.edittext_password);
-        mTextCnfPassword = (EditText) findViewById(R.id.edittext_cnf_password);
-        mButtonRegister = (Button) findViewById(R.id.button_register);
 
-
-        mButtonRegister.setOnClickListener(new View.OnClickListener() {
-=======
-        button_register=findViewById(R.id.btnR);
-        nom=findViewById(R.id.edittext_username);
-        email=findViewById(R.id.email);
+        nom = (EditText) findViewById(R.id.edittext_username);
+        pass= (EditText) findViewById(R.id.edittext_password);
+        pass1 = (EditText) findViewById(R.id.edittext_password);
+        button_register = (Button) findViewById(R.id.button_register);
         ctx=this;
-        tel=findViewById(R.id.tel);
-        pass=findViewById(R.id.edittext_password);
-        pass1=findViewById(R.id.pass1);
+
+
         button_register.setOnClickListener(new View.OnClickListener() {
->>>>>>> 533738c70742c509708c873c173686c9a8fdb8af
-            @Override
-            public void onClick(View v) {
-                if(pass.getText().toString().equals(pass1.getText().toString())){
-                    Utilisateur useUtilisateur=new Utilisateur(nom.getText().toString(),email.getText().toString(),tel.getText().toString(),pass.getText().toString());
-                    if(UtilisateurManager.add(ctx,useUtilisateur)){
-                        Toast.makeText(ctx, "User Bien Ajouter", Toast.LENGTH_SHORT).show();
-
-                    }
-                    else{
-                        Toast.makeText(ctx, "Problem D ajout", Toast.LENGTH_SHORT).show();
-                    }
-
-                }
-            }
+                                               @Override
+                                               public void onClick(View v) {
+                                                   button_register = findViewById(R.id.btnR);
+                                                   nom = findViewById(R.id.edittext_username);
+                                                   email = findViewById(R.id.email);
+                                                   tel = findViewById(R.id.tel);
+                                                   pass = findViewById(R.id.edittext_password);
+                                                   pass1 = findViewById(R.id.pass1);
+                                               }
         });
 
 
+        button_register.setOnClickListener(new View.OnClickListener()
+            {
 
+                public void onClick (View v){
+                if (pass.getText().toString().equals(pass1.getText().toString())) {
+                    Utilisateur useUtilisateur = new Utilisateur(nom.getText().toString(), email.getText().toString(), tel.getText().toString(), pass.getText().toString());
+                    if (UtilisateurManager.add(ctx, useUtilisateur)) {
+                        Toast.makeText(ctx, "User Bien Ajouter", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(ctx, "Problem D ajout", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+            });
     }
 }
+
+
+

@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.menu_panier:
                 Toast.makeText(MainActivity.this, getString(R.string.menu_panier), Toast.LENGTH_LONG).show();
-<<<<<<< HEAD
+
 
 
 //               Intent panier = new Intent(MainActivity.this, PanierActivity.class); // Changer pour PANIER
@@ -89,11 +89,11 @@ public class MainActivity extends AppCompatActivity {
                 Intent panier = new Intent(MainActivity.this, PanierActivity.class); // Changer pour PANIER
                 startActivity(panier);
 
-=======
+
                 // YAHYA ATTENTION!!!! Changer pour PANIER.class
 //                Intent panier = new Intent(MainActivity.this, Panier.class); // Changer pour PANIER
 //                startActivity(panier);
->>>>>>> 533738c70742c509708c873c173686c9a8fdb8af
+
                 Toast.makeText(MainActivity.this, getString(R.string.menu_panier), Toast.LENGTH_LONG).show();
                 break;
             case R.id.menu_planCommande:
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(ctx, msg, Toast.LENGTH_SHORT).show();
         return true;
     }
-    public void process(View view) {
+   /* public void process(View view) {
         Intent intent = null, chooser = null;
         if (view.getId() == R.id.btn_google_maps) {
             intent = new Intent(Intent.ACTION_VIEW);
@@ -147,6 +147,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(chooser);
         }
         if (view.getId() == R.id.btn_email) {
-        }
+        }*/
     }
-}
+

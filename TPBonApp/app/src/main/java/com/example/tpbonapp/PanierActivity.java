@@ -18,6 +18,7 @@ import java.util.ArrayList;
 
 import adapter.PanierAdapter;
 import entite.Panier;
+import entite.Produit;
 import manager.PanierManager;
 import manager.ProduitManager;
 
@@ -33,6 +34,7 @@ public class PanierActivity extends AppCompatActivity {
     EditText msg;
     Button envoi;
     Context cxt;
+    Produit p ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,14 +51,23 @@ public class PanierActivity extends AppCompatActivity {
             }
         });
         ArrayList<Panier> listePanier = PanierManager.getPaniers(this);
-        total_prix = findViewById(R.id.prixTotale);
-        double prixTotal = 0;
-        //total_prix.setText("Total : "+prixTotal+" $");
-        //this.lst  = findViewById(R.id.listeProduit);
+
         PanierAdapter panierAdaptater = new PanierAdapter(this, R.layout.panier_layout, listePanier);
         lst.setAdapter(panierAdaptater);
+      /*  img= findViewById(R.id.poubelle);
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                PanierManager.deleteProduitPanier(cxt,p.getIdProduit());
+                Toast.makeText(cxt, "Produit supprimer du Panier", Toast.LENGTH_SHORT).show();
+            }
+        });*/
     }
-    @SuppressLint("WrongViewCast")
+
+
+   /* @SuppressLint("WrongViewCast")
     private void initActivity() {
         description = findViewById(food_name);
         quantite = findViewById(R.id.numberBtn);
@@ -69,8 +80,8 @@ public class PanierActivity extends AppCompatActivity {
                 SmsManager.getDefault().sendTextMessage(description.getText().toString(), null, quantite.getText().toString(), null, null);
                 Toast.makeText(cxt, "Name : Commande envoyer", Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
     }
-}
+
 
 
