@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-  //      ConnexionBd.copyBdFromAssets(this);
+      ConnexionBd.copyBdFromAssets(this);
         btnCon = findViewById(R.id.button_login);
         nom=findViewById(R.id.edittext_username);
         pass=findViewById(R.id.edittext_password);
