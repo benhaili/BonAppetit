@@ -10,26 +10,30 @@
         android:layout_width="0dp"
         android:layout_height="66dp"
         android:layout_weight="2"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:srcCompat="@drawable/ic_launcher_background"
+      />
 
     <TextView
         android:id="@+id/prixTotale"
-        android:layout_width="13dp"
+        android:layout_width="6dp"
         android:layout_height="45dp"
         android:layout_weight="1"
         android:text="TextView" />
 
     <Button
         android:id="@+id/valider"
-        android:layout_width="60dp"
+        android:layout_width="12dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="@drawable/raduisboutton"
         android:text="valider" />
 
-    <ImageView
-        android:id="@+id/poubelle"
-        android:layout_width="19dp"
-        android:layout_height="53dp"
+    <Button
+        android:id="@+id/suprimer"
+        android:layout_width="12dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        app:srcCompat="@drawable/poubelle" />
+        android:background="@drawable/raduisboutton"
+        android:text="supprimer" />
+
 </LinearLayout>

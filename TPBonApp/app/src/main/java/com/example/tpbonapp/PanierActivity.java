@@ -28,7 +28,8 @@ public class PanierActivity extends AppCompatActivity {
     TextView total_prix;
     Button mg;
     Button valider;
-    ImageView img;
+    Button suprimer ;
+
     EditText quantite;
     EditText description;
     EditText msg;
@@ -54,8 +55,8 @@ public class PanierActivity extends AppCompatActivity {
 
         PanierAdapter panierAdaptater = new PanierAdapter(this, R.layout.panier_layout, listePanier);
         lst.setAdapter(panierAdaptater);
-      /*  img= findViewById(R.id.poubelle);
-        img.setOnClickListener(new View.OnClickListener() {
+     /* suprimer= findViewById(R.id.suprimer);
+      suprimer .setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
